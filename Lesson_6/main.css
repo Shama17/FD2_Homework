@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+}
+
+header {
+   background-color: #2d313d;
+}
+
+.header {
+   display: flex;
+   justify-content: space-between;
+   max-width: 960px;
+   margin: auto;
+}
+
+.logo {
+    width: 32px;
+    height: 20px;
+    margin: 15px;
+
+}
+
+.userPanel {
+    display: flex;
+    align-items: center;
+    margin: auto 0px
+}
+
+.header a {
+    color: lightgray;
+}
+
+.userCity {
+    text-decoration: none;
+    border-bottom: 1px dashed lightgray;
+
+}
+
+.header div i {
+     font-size: 18px;
+     color:lightgray;
+     padding-right: 30px;
+ }
