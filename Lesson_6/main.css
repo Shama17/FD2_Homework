@@ -1,22 +1,24 @@
 body {
     margin: 0;
+
 }
 
 header {
-   background-color: #2d313d;
+    background-color: #2d313d;
 }
 
 .header {
-   display: flex;
-   justify-content: space-between;
-   max-width: 960px;
-   margin: auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 960px;
+    margin: auto;
+    color: #727989;
 }
 
 .logo {
     width: 32px;
     height: 20px;
-    margin: 15px;
+    margin: 18px 0px;
 
 }
 
@@ -27,17 +29,193 @@ header {
 }
 
 .header a {
-    color: lightgray;
+    color: #727989;
+    padding-right: 5px;
 }
 
 .userCity {
     text-decoration: none;
-    border-bottom: 1px dashed lightgray;
+    border-bottom: 1px dashed #727989;
 
 }
 
 .header div i {
-     font-size: 18px;
-     color:lightgray;
-     padding-right: 30px;
- }
+    font-size: 16px;
+    padding-right: 30px;
+}
+
+.userPanel i.fa-search {
+    padding-right: 0px;
+}
+
+.header div img {
+    padding-right: 30px;
+}
+
+.navigation {
+    background-color: #646d81
+}
+
+.navMenu {
+    margin: auto;
+    max-width: 960px;
+    font: 12px Arial;
+}
+
+.navMenu a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    padding-right: 18px;
+    border-top: solid #646d81 5px;
+}
+
+.main {
+    overflow: hidden;
+    max-width: 960px;
+    margin: 0 auto;
+    box-shadow: 0 3px 10px #e0e2e6;
+    background-color: white;
+}
+
+.sidebar {
+    float: left;
+    border-right: solid #e0e4ed 1px;;
+}
+
+.sidebar menu {
+    margin: auto;
+    padding: 15px 0px;
+    width: 170px;
+}
+
+.sidebar menu li {
+    list-style-type: none;
+    padding: 8px 28px 8px 23px;
+    border-left: solid white 5px;
+}
+
+.sidebar menu li a {
+    text-decoration: none;
+    font: 13px Arial;
+    color: #99a1b3;
+}
+
+.submenu {
+    margin-top: 28px;
+    padding: 5px 28px 9px 23px;
+    font: 16px Georgia;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.content h1 {
+    margin: 0px;
+    padding: 25px 0 20px 25px;
+    font: 26px Georgia;
+}
+
+.content h1 a {
+    text-decoration: none;
+    border-bottom: 1px dashed black;
+    color: black;
+    margin-left: 20px;
+}
+
+.searchPanel {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 730px;
+    padding: 5px 30px;
+    background-color: #f2f4f8;
+    color: #99a1b3;
+}
+
+.searchPanel input {
+    padding-left: 10px;
+    font: 14px Arial;
+    width: 280px;
+    height: 40px;
+    border: solid #d6d9e1 1px;
+    border-radius: 5px;
+    background: url(images/search.png) no-repeat 260px 9px;
+    background-color: white;
+}
+
+.searchPanel span {
+
+    margin-right: 30px;
+}
+
+.searchPanel .fa-sliders {
+
+    margin-right: 30px;
+}
+
+.mainContent {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex: 0 0 auto;
+    margin-bottom: 1px;
+}
+
+.navFooter {
+    text-decoration: none;
+    padding: 14px 28px;
+    background-color: #f2f4f8;
+}
+
+.navFooter a {
+    text-decoration: none;
+    color: #99a1b3;
+}
+
+.copyright {
+    margin-top: 1px;
+    background-color: #f2f4f8;
+    padding: 14px 28px;
+}
+
+.post{
+    display: flex;
+    font: 12px Arial;
+    color: #99a1b3;
+    margin: 30px;
+}
+.userPhoto {
+    width: 60px;
+    float: left;
+    margin-right: 10px;
+}
+.title {
+    color: #4f9cd4;
+    font: bold 16px Arial;
+    padding: 5px 0 5px;
+    margin: 0px;
+}
+.text {
+    color: black;
+    font-size: 14px;
+    padding-bottom: 14px;
+    margin: 0px
+}
+.member {
+    padding: 5px 15px;
+    background-color: #f2f4f8;
+    border-radius: 5px;
+    margin-left: 26px;
+}
+.comments {
+    float: right;
+    margin-right: 28px;
+}
