@@ -5,6 +5,8 @@
     <title>Title</title>
     <link rel="stylesheet" href="main.css">
     <script src="https://kit.fontawesome.com/a423d74e48.js" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 </head>
 <body>
 <header>
@@ -20,7 +22,13 @@
             <i class="fas fa-search"></i>
         </div>
     </div>
-
+    <div class="headerMobile">
+        <i class="fa fa-navicon"></i>
+        <img class="logoWhite" src="images/logo-white.png">
+        <span>Page title</span>
+        <img class="userPhoto" src="images/userPhotoBig.jpg">
+        <i class="fa fa-search" onclick="$( '#fa-search' ).trigger( 'click' )"></i>
+    </div>
 </header>
 <div class="navigation">
     <nav class="navMenu">
@@ -31,6 +39,16 @@
         <a href="#">Menu item</a>
     </nav>
 </div>
+<nav class="mobileMenu">
+    <ul>
+        <li><a href="#">Menu item</a></li>
+        <li><a href="#">Menu item</a></li>
+        <li><a href="#">Menu item</a></li>
+        <li><a href="#">Menu item</a></li>
+        <li><a href="#">Menu item</a></li>
+        <li><a href="#">Menu item</a></li>
+    </ul>
+</nav>
 <div class="main">
     <div class="sidebar">
         <menu>
@@ -100,6 +118,11 @@
             <span>+ New item</span>
             <i class="fa fa-sliders"></i>
         </div>
+        <div class="searchPanelMobile">
+            <i class="fa fa-search" id="fa-search" onclick="slide()"></i>
+            <i class="fa fa-plus"></i>
+            <i class="fa fa-sliders"></i>
+        </div>
         <div class="mainContent">
             <div class="post">
                 <div class="userPhoto"><img src="images/photo1.jpg"></div>
@@ -122,7 +145,10 @@
                     <span class="member">Member</span>
                     <span class="comments"><i class="fa fa-comments"></i><span> 2 </span><i class="fa fa-clock-o"></i> 20m</span>
                     <p class="title">Item title 2</p>
-                    <p class="text">Suspendisse potenti. Duis imperdiet ex non leo condimentum efficitur. Sed rhoncus eleifend lacus sit amet faucibus. Nunc semper nisl a dolor pretium dapibus quis quis lacus. Nulla faucibus viverra laoreet. Fusce in scelerisque magna. Duis porta erat vitae lectus lacinia tempus.</p>
+                    <p class="text">Suspendisse potenti. Duis imperdiet ex non leo condimentum efficitur. Sed rhoncus
+                        eleifend lacus sit amet faucibus. Nunc semper nisl a dolor pretium dapibus quis quis lacus.
+                        Nulla faucibus viverra laoreet. Fusce in scelerisque magna. Duis porta erat vitae lectus lacinia
+                        tempus.</p>
                     <span class="tags"><i class="fa fa-tag"></i> tag1, tag2, tag3</span>
                 </div>
             </div>
@@ -133,7 +159,10 @@
                     <span class="member">Member</span>
                     <span class="comments"><i class="fa fa-comments"></i><span> 2 </span><i class="fa fa-clock-o"></i> 20m</span>
                     <p class="title">Item title 3</p>
-                    <p class="text">Suspendisse potenti. Duis imperdiet ex non leo condimentum efficitur. Sed rhoncus eleifend lacus sit amet faucibus. Nunc semper nisl a dolor pretium dapibus quis quis lacus. Nulla faucibus viverra laoreet. Fusce in scelerisque magna. Duis porta erat vitae lectus lacinia tempus.</p>
+                    <p class="text">Suspendisse potenti. Duis imperdiet ex non leo condimentum efficitur. Sed rhoncus
+                        eleifend lacus sit amet faucibus. Nunc semper nisl a dolor pretium dapibus quis quis lacus.
+                        Nulla faucibus viverra laoreet. Fusce in scelerisque magna. Duis porta erat vitae lectus lacinia
+                        tempus.</p>
                     <span class="tags"><i class="fa fa-tag"></i> tag1, tag2, tag3</span>
                 </div>
             </div>
@@ -144,10 +173,17 @@
                     <span class="member">Member</span>
                     <span class="comments"><i class="fa fa-comments"></i><span> 2 </span><i class="fa fa-clock-o"></i> 20m</span>
                     <p class="title">Item title 4</p>
-                    <p class="text">Suspendisse potenti. Duis imperdiet ex non leo condimentum efficitur. Sed rhoncus eleifend lacus sit amet faucibus. Nunc semper nisl a dolor pretium dapibus quis quis lacus. Nulla faucibus viverra laoreet. Fusce in scelerisque magna. Duis porta erat vitae lectus lacinia tempus.</p>
+                    <p class="text">Suspendisse potenti. Duis imperdiet ex non leo condimentum efficitur. Sed rhoncus
+                        eleifend lacus sit amet faucibus. Nunc semper nisl a dolor pretium dapibus quis quis lacus.
+                        Nulla faucibus viverra laoreet. Fusce in scelerisque magna. Duis porta erat vitae lectus lacinia
+                        tempus.</p>
                     <span class="tags"><i class="fa fa-tag"></i> tag1, tag2, tag3</span>
                 </div>
             </div>
+        </div>
+        <div class="buttons">
+            <a href="#"><i class="fa fa-angle-left"></i>Previous</a>
+            <a href="#">Next<i class="fa fa-angle-right"></i></a>
         </div>
         <div class="footer">
             <nav class="navFooter">
@@ -164,6 +200,6 @@
         </div>
     </div>
 </div>
-
+<script src="main.js"></script>
 </body>
 </html>

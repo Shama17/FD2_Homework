@@ -15,6 +15,10 @@ header {
     color: #727989;
 }
 
+.headerMobile {
+    display: none;
+}
+
 .logo {
     width: 32px;
     height: 20px;
@@ -66,14 +70,19 @@ header {
     display: inline-block;
     text-decoration: none;
     color: white;
-    padding-top: 5px;
-    padding-bottom: 10px;
-    padding-right: 18px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    margin-right: 15px;
+    font: 14px Arial;
     border-top: solid #646d81 5px;
+}
+.navMenu a:hover {
+    border-top-color: white;
 }
 
 .main {
-    overflow: hidden;
+    display: flex;
+
     max-width: 960px;
     margin: 0 auto;
     box-shadow: 0 3px 10px #e0e2e6;
@@ -93,20 +102,30 @@ header {
 
 .sidebar menu li {
     list-style-type: none;
-    padding: 8px 28px 8px 23px;
+    padding: 9px 28px 10px 9px;
     border-left: solid white 5px;
+}
+ .sidebar menu li:hover {
+     border-left-color: gray;
+
 }
 
 .sidebar menu li a {
-    text-decoration: none;
-    font: 13px Arial;
-    color: #99a1b3;
+     text-decoration: none;
+     font: 13px Arial;
+     color: #99a1b3;
+ }
+.sidebar menu li a:hover {
+    color:black;
 }
 
 .submenu {
     margin-top: 28px;
     padding: 5px 28px 9px 23px;
     font: 16px Georgia;
+}
+.main .submenu:hover {
+    border-left-color: white;
 }
 
 .content {
@@ -126,6 +145,10 @@ header {
     border-bottom: 1px dashed black;
     color: black;
     margin-left: 20px;
+}
+
+.searchPanelMobile {
+    display: none;
 }
 
 .searchPanel {
@@ -167,6 +190,7 @@ header {
 .footer {
     flex: 0 0 auto;
     margin-bottom: 1px;
+    color: #99a1b3;
 }
 
 .navFooter {
@@ -186,36 +210,170 @@ header {
     padding: 14px 28px;
 }
 
-.post{
+.post {
     display: flex;
     font: 12px Arial;
     color: #99a1b3;
     margin: 30px;
 }
+
 .userPhoto {
     width: 60px;
     float: left;
     margin-right: 10px;
 }
+
 .title {
     color: #4f9cd4;
     font: bold 16px Arial;
     padding: 5px 0 5px;
     margin: 0px;
 }
+
 .text {
     color: black;
     font-size: 14px;
     padding-bottom: 14px;
     margin: 0px
 }
+
 .member {
     padding: 5px 15px;
     background-color: #f2f4f8;
     border-radius: 5px;
     margin-left: 26px;
 }
+
 .comments {
     float: right;
     margin-right: 28px;
 }
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons a {
+    text-decoration: none;
+    color: black;
+    font: 14px Arial;
+    border: solid #99a1b3 1px;
+    border-radius: 4px;
+    padding: 10px 13px 10px 18px;
+    margin: 20px 10px;
+}
+
+.buttons a:hover {
+    background-color: #f2f4f8;
+}
+
+.buttons :first-child i {
+    margin-right: 10px;
+}
+
+.buttons :last-child i {
+    margin-left: 10px;
+}
+
+.navFooter a {
+    margin-right: 15px;
+}
+
+.mobileMenu {
+    background-color: #2d313d;
+    display: none;
+    position: absolute;
+    width: 150px;
+    z-index: 10000;
+    top: 47px;
+    font: 20px Arial;
+}
+.mobileMenu ul  {
+    margin: 0px;
+    padding: 15px;
+}
+
+.mobileMenu ul li {
+    text-decoration: none;
+    color: white;
+    list-style-type: none;
+    padding: 5px 0px;
+}
+.mobileMenu ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+@media screen and (max-width: 500px) {
+    header .header {
+        display: none;
+    }
+
+    header .headerMobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 15px;
+        color: white;
+        font-size: 20px;
+    }
+
+    .headerMobile img {
+        width: 60px;
+        border-radius: 2px;
+    }
+
+    .headerMobile .userPhoto {
+        width: 45px;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .content h1 {
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .searchPanel {
+        display: none;
+    }
+
+    .searchPanelMobile {
+        display: flex;
+        justify-content: space-between;
+        background-color: #f2f4f8;
+        font-size: 28px;
+        padding: 15px;
+        color: #99a1b3;
+    }
+
+    .post {
+
+        font: 15px Arial;
+
+        margin: 15px;
+    }
+
+    .postContent .text {
+        font-size: 16px;
+    }
+
+    .navFooter {
+        text-align: center;
+    }
+    .copyright {
+        display: none;
+    }
+
+    .fa-navicon:hover {
+        color: gray;
+    }
+}
+
