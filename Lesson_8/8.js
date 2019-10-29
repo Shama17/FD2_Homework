@@ -5,10 +5,10 @@ function Animal(name) {
     this.dailyNorm = function (amount) {
         if (!arguments.length) return this._formatFoodAmount();
         if (amount < 50) {
-            throw new Error("Слишком мало еды");
+            throw new Error('Слишком мало еды');
         }
         if (amount > 500) {
-            throw new Error("Слишком много еды");
+            throw new Error('Слишком много еды');
         }
 
         this._foodAmount = amount;
@@ -28,7 +28,7 @@ function Cat() {
     var catFeed = this.feed;
     this.feed = function () {
         catFeed.call(this);
-        console.log("Кот доволен ^_^");
+        console.log('Кот доволен ^_^');
     }
 }
 
@@ -43,10 +43,10 @@ function Animal(name) {
     this.dailyNorm = function (amount) {
         if (!arguments.length) return this._formatFoodAmount();
         if (amount < 50) {
-            throw new Error("Слишком мало еды");
+            throw new Error('Слишком мало еды');
         }
         if (amount > 500) {
-            throw new Error("Слишком много еды");
+            throw new Error('Слишком много еды');
         }
 
         self._foodAmount = amount;
@@ -66,7 +66,7 @@ function Cat() {
     var catFeed = this.feed;
     this.feed = function () {
         catFeed();
-        console.log("Кот доволен ^_^");
+        console.log('Кот доволен ^_^');
         return this;
     }
     this.stroke = function () {
