@@ -61,4 +61,25 @@ console.log(numOfLetters(txt))
 
 // Задание 5
 
+var txt = 'Привет Вася. Петя тоже сказал привет, но когда Вася решил нахмурить лицо, Петя просто промолчал. Вася тоже мог бы промолчать, но не стал. В результате имеем текст с повторяющимися словами привет Вася и Петя'
 
+function repeats(str) {
+    var arr = str.toLowerCase().split(/[.?!,:; ]/)
+    arr = arr.filter(function (item) {
+        return item.length>0
+    });
+    var res = {};
+    for (var i = 0; i < arr.length; ++i) {
+        var key = arr[i];
+        if (res[key])
+            ++res[key];
+        else
+            res[key] = 1;
+    }
+    var max = Object.keys(res).reduce(function (prev, curr) {
+        return +res[prev] > +res[curr] ? prev : curr;
+    });
+    console.log('Максимальное число повторений у слова ' + '"'+ max + '" - ' + res[max])
+}
+
+console.log(repeats(txt))
