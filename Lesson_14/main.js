@@ -1,4 +1,4 @@
-var btn = document.getElementsByTagName('button')
+var btn = document.getElementsByTagName('button');
 btn[0].disabled = true;
 btn[0].onclick = createBoard;
 
@@ -6,14 +6,14 @@ document.getElementById('x').addEventListener("keyup", checkAnotherInput);
 document.getElementById('y').addEventListener("keyup", checkAnotherInput);
 
 function checkAnotherInput() {
+
     if (document.getElementById('y').value && document.getElementById('x').value) {
         btn[0].disabled = false;
     }
+    else btn[0].disabled = true;
 }
 
-
 function createBoard() {
-
     var x = +document.getElementById('x').value;
     var y = +document.getElementById('y').value;
     if ((isNaN(x) || isNaN(y)) || (x < 1 || x > 10) && (y < 1 || y > 10)) {
@@ -39,7 +39,6 @@ function createBoard() {
         tableBoard.appendChild(tableBoardBody);
         board[0].appendChild(tableBoard)
         tableBoard.addEventListener("click", reverseColor)
-
         clearValue()
     }
 }
