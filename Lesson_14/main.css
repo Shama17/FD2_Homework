@@ -1,0 +1,22 @@
+p {
+    margin: 10px;
+    display: inline-block;
+}
+.board {
+    margin: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+
+td {
+    border: 1px solid grey;
+    width: 60px;
+    height: 60px;
+}
+
+.black {
+    background-color: black;
+}
