@@ -13,7 +13,6 @@ function addRow() {
     tableBody.insertAdjacentElement('afterbegin', cloneRow)
 }
 
-
 tableBody.onclick = function (event) {
     var target = event.target;
     if (target.tagName === 'TD' && target.id !== 'addRow') {
@@ -21,23 +20,18 @@ tableBody.onclick = function (event) {
             inputText.value = target.innerText;
             target.innerText = '';
             target.append(inputText);
-            target.getElementsByTagName('input')[0].focus()
+            inputText.focus()
         } else {
-            target.getElementsByTagName('input')[0].focus()
+            inputText.focus()
         }
-
-
         inputText.onblur = function () {
             target.innerText = inputText.value;
             inputText.value = '';
             inputText.remove()
-
         };
-        inputText.onkeypress = function (event) {
+        tableBody.onkeypress = function (event) {
             if (event.key === 'Enter') {
-                target.innerText = inputText.value;
-                inputText.value = '';
-                inputText.remove()
+                inputText.blur()
             }
         }
     }
