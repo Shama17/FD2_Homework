@@ -5,11 +5,11 @@ info.setAttribute('style', 'visibility: hidden');
 var responseUsersList = [];
 
 button.onclick = function () {
-    var xhr = new XMLHttpRequest();
     if (localStorage.getItem('userData')) {
-        responseUsersList = JSON.parse(localStorage.getItem('userData'))
+        responseUsersList = JSON.parse(localStorage.getItem('userData'));
         showUsersList(responseUsersList);
     } else {
+        var xhr = new XMLHttpRequest();
         xhr.open('GET', 'https://reqres.in/api/users?page=2');
         xhr.onload = function () {
             var statusType = +String(this.status)[0];
@@ -20,7 +20,7 @@ button.onclick = function () {
             } else {
                 showError(this.status);
             }
-        }
+        };
         xhr.onerror = function () {
             showError(this.status);
         };
@@ -31,16 +31,16 @@ button.onclick = function () {
 function showUsersList(users) {
     tabs.innerHTML = "";
     for (var i = 0; i < users.length; i++) {
-        tabs.insertAdjacentHTML('beforeEnd', '<div class="tab" data-userId =' + i + ' >User' + (i + 1) + '</div>')
+        tabs.insertAdjacentHTML('beforeEnd', '<div class="tab" data-userId =' + i + ' >User' + (i + 1) + '</div>');
     }
-    document.getElementsByClassName('tab')[0].classList.add('active')
+    document.getElementsByClassName('tab')[0].classList.add('active');
     showUserInfo(0);
 }
 
 function showUserInfo(userId) {
     info.innerHTML = '';
     info.setAttribute('style', 'visibility: show');
-    info.insertAdjacentHTML("beforeend", '<div class="photo"><img src="' + responseUsersList[userId]['avatar'] + '"></div>')
+    info.insertAdjacentHTML("beforeend", '<div class="photo"><img src="' + responseUsersList[userId]['avatar'] + '"></div>');
     info.insertAdjacentHTML('beforeend', '<div class="userInfo">' +
         '<p>First name: ' + responseUsersList[userId]['first_name'] + '</p>' +
         '<p>Last name: ' + responseUsersList[userId]['last_name'] + '</p>' +
@@ -57,6 +57,6 @@ tabs.onclick = function (event) {
         tab.classList.remove('active')
     });
     var target = event.target;
-    target.classList.add('active')
-    showUserInfo(target.getAttribute('data-userId'))
+    target.classList.add('active');
+    showUserInfo(target.getAttribute('data-userId'));
 };
